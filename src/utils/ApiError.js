@@ -1,4 +1,5 @@
 // we send through this class only
+// if not use this class then we have to send error as res.send()
 class ApiError extends Error {
   constructor(
     statusCode,

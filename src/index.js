@@ -7,7 +7,7 @@ import { app } from "./app.js";
 // not available in actual document but we are
 // using through an experimental feature in package.json
 dotenv.config({
-  path: "./env",
+  path: "./.env",
 });
 
 connectDB()
