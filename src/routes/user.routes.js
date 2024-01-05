@@ -3,6 +3,7 @@ import {
   loginUser,
   logoutUser,
   registerUser,
+  refreshAccessToken,
 } from "../controllers/user.controller.js";
 import { upload } from "../middlewares/multer.middleware.js";
 import { verifyJWT } from "../middlewares/auth.middleware.js";
@@ -28,4 +29,5 @@ router.route("/login").post(loginUser);
 // it will run function one by one therefore we use next in middleware
 // to tell route to run next function
 router.route("/logout").post(verifyJWT, logoutUser);
+router.route("/refresh-token").post(refreshAccessToken);
 export default router;
