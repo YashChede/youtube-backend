@@ -1,5 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 
+// we have designed this because if we create array then CURD op's
+// on that is very difficult
 const subscriptionSchema = new Schema(
   {
     subscriber: {
